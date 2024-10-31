@@ -53,7 +53,15 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan migrate
    ```
 
-8. **Menjalankan Server**
+8. **Buat Link Storage**
+
+   Jalankan perintah berikut untuk membuat link simbolik ke direktori storage:
+
+   ```bash
+   php artisan storage:link
+   ```
+
+9. **Menjalankan Server**
 
    Untuk menjalankan server pengembangan:
 
@@ -63,7 +71,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 
    Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-9. **Menjalankan NPM Dev**
+10. **Menjalankan NPM Dev**
 
    Untuk mengkompilasi aset frontend dan menjalankan server Vite:
    ```bash
