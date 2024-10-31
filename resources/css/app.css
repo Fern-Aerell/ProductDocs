@@ -1,0 +1,125 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+    @apply !m-0 p-0 bg-slate-100 dark:bg-gray-900 dark:text-gray-100 overflow-x-hidden;
+}
+
+.logo {
+    @apply w-[40px] h-[40px];
+}
+
+.navbar {
+    @apply flex flex-row items-center justify-between py-1 px-[10px] lg:px-[50px] xl:px-[200px] shadow-lg sticky top-0 left-0 bg-white dark:bg-gray-800 dark:text-gray-100 z-40;
+}
+
+.navbar > div {
+    @apply flex flex-row gap-2 items-center;
+}
+
+.navbar > h1 {
+    @apply font-extrabold text-3xl dark:text-gray-100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer {
+    @apply bg-white dark:bg-gray-800 dark:text-gray-100 flex items-center justify-center py-3 px-[10px] lg:px-[50px] xl:px-[200px] border dark:border-gray-700 text-center;
+}
+
+.sidebar-and-mainbar-container {
+    @apply px-[10px] lg:px-[50px] xl:px-[200px] flex flex-row gap-3 my-3 min-h-screen;
+}
+
+.sidebar {
+    @apply h-full lg:h-auto fixed right-0 top-0 z-50 bg-white dark:bg-gray-800 dark:text-gray-100 shadow-lg lg:rounded-lg lg:shadow-none lg:z-10 lg:static;
+    transition: width 0.3s ease; /* Tambahkan transisi untuk lebar */
+}
+
+.sidebar-content {
+    @apply p-10 select-none h-full;
+    word-break: break-word;
+}
+
+.sidebar-content p,
+.sidebar-content li {
+    @apply font-bold hover:ml-1 hover:cursor-pointer transition-all hover:text-red-500 dark:hover:text-red-400 duration-300 p-0 m-0;
+    white-space: normal;
+}
+
+.sidebar-content p {
+    @apply truncate mt-2;
+}
+
+.sidebar-content ul {
+    @apply hover:cursor-pointer py-1 transition-all list-none m-0 p-0 ml-6;
+}
+
+.sidebar-content ul .activate {
+    @apply list-disc marker:text-red-500 dark:marker:text-red-400;
+}
+
+.sidebar-content li {
+    @apply mt-1;
+}
+
+.sidebar-content li a {
+    @apply no-underline text-black dark:text-gray-100 hover:text-red-500 dark:hover:text-red-400 font-semibold truncate;
+    white-space: normal;
+}
+
+.sidebar-button {
+    @apply inline absolute -left-[25px] top-[40%] lg:hidden bg-red-500 text-white font-extrabold px-2 py-10 border-black;
+}
+
+
+
+.mainbar {
+    @apply w-full bg-white dark:bg-gray-800 dark:text-gray-100 p-10 rounded-lg overflow-x-auto;
+}
+
+.mainbar no-content {
+    @apply opacity-30 font-bold z-0;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f3f4f6; /* Light gray for light mode */
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: #e5e7eb;
+}
+
+.theme-toggle:focus {
+    outline: none;
+}
+
+.theme-toggle i {
+    font-size: 18px;
+    color: #ffbb00; /* Default color for light mode icon */
+    transition: color 0.3s ease;
+}
+
+.dark .theme-toggle {
+    background-color: #374151; /* Darker gray for dark mode */
+}
+
+.dark .theme-toggle:hover {
+    background-color: #4b5563;
+}
+
+.dark .theme-toggle i {
+    color: #e5e7eb; /* Icon color in dark mode */
+}
