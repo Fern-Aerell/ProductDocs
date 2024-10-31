@@ -16,7 +16,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 1. **Clone Repositori**
 
    ```bash
-   git clone https://github.com/username/ProductDocs.git
+   git clone https://github.com/Fern-Aerell/ProductDocs.git
    cd ProductDocs
    ```
 
@@ -96,4 +96,4 @@ Pastikan untuk memeriksa dokumentasi Laravel untuk informasi lebih lanjut mengen
 
 Terima kasih telah menggunakan ProductDocs!
 ```
-Kamu bisa mengganti URL repositori di langkah 1 sesuai dengan repositori GitHub milikmu. Jika ada yang perlu ditambahkan atau diperbaiki, beri tahu saya ya!
+Jika ada yang perlu ditambahkan atau diperbaiki, beri tahu saya ya!
