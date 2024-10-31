@@ -73,10 +73,11 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 
 10. **Menjalankan NPM Dev**
 
-   Untuk mengkompilasi aset frontend dan menjalankan server Vite:
-   ```bash
-   npm run dev
-   ```
+    Untuk mengkompilasi aset frontend dan menjalankan server Vite:
+
+    ```bash
+    npm run dev
+    ```
 
 ## Fitur Admin
 
