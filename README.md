@@ -63,6 +63,13 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 
    Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
+9. **Menjalankan NPM Dev**
+
+   Untuk mengkompilasi aset frontend dan menjalankan server Vite:
+   ```bash
+   npm run dev
+   ```
+
 ## Fitur Admin
 
 - Akses halaman admin di `/admin`.
