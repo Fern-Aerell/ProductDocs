@@ -37,7 +37,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    cp .env.example .env
    ```
 
-6. **Generate Kunci Aplikasi**
+4. **Generate Kunci Aplikasi**
 
    Jalankan perintah berikut untuk menghasilkan kunci aplikasi:
 
@@ -45,7 +45,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan key:generate
    ```
 
-7. **Migrasi Database**
+5. **Migrasi Database**
 
    Jalankan migrasi untuk membuat tabel yang diperlukan:
 
@@ -53,7 +53,15 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan migrate
    ```
 
-8. **Buat Link Storage**
+6. **Jalankan Seeder untuk Data User**
+
+   Setelah migrasi, jalankan seeder untuk membuat data Superadmin dan Admin sementara:
+
+   ```bash
+   php artisan db:seed
+   ```
+
+7. **Buat Link Storage**
 
    Jalankan perintah berikut untuk membuat link simbolik ke direktori storage:
 
@@ -61,7 +69,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan storage:link
    ```
 
-9. **Menjalankan Server**
+8. **Menjalankan Server**
 
    Untuk menjalankan server pengembangan:
 
@@ -71,7 +79,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 
    Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-10. **Menjalankan NPM Dev**
+9. **Menjalankan NPM Dev**
 
     Untuk mengkompilasi aset frontend dan menjalankan server Vite:
 
@@ -79,14 +87,15 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
     npm run dev
     ```
 
-## Fitur Admin
+## Data user sementara
 
-- Akses halaman admin di `/admin`.
-- Buat user admin baru dengan menjalankan perintah:
+   - **Superadmin**
+     - Email: `superadmin@gmail.com`
+     - Password: `123`
 
-   ```bash
-   php artisan make:filament-user
-   ```
+   - **Admin**
+     - Email: `admin@gmail.com`
+     - Password: `123`
 
 ## Informasi Tambahan
 
@@ -95,5 +104,3 @@ Pastikan untuk memeriksa dokumentasi Laravel untuk informasi lebih lanjut mengen
 ---
 
 Terima kasih telah menggunakan ProductDocs!
-```
-Jika ada yang perlu ditambahkan atau diperbaiki, beri tahu saya ya!
