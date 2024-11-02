@@ -16,7 +16,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 1. **Clone Repositori**
 
    ```bash
-   git clone https://github.com/username/ProductDocs.git
+   git clone https://github.com/Fern-Aerell/ProductDocs.git
    cd ProductDocs
    ```
 
@@ -53,7 +53,15 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan migrate
    ```
 
-8. **Menjalankan Server**
+8. **Buat Link Storage**
+
+   Jalankan perintah berikut untuk membuat link simbolik ke direktori storage:
+
+   ```bash
+   php artisan storage:link
+   ```
+
+9. **Menjalankan Server**
 
    Untuk menjalankan server pengembangan:
 
@@ -62,6 +70,14 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    ```
 
    Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+10. **Menjalankan NPM Dev**
+
+    Untuk mengkompilasi aset frontend dan menjalankan server Vite:
+
+    ```bash
+    npm run dev
+    ```
 
 ## Fitur Admin
 
@@ -80,4 +96,4 @@ Pastikan untuk memeriksa dokumentasi Laravel untuk informasi lebih lanjut mengen
 
 Terima kasih telah menggunakan ProductDocs!
 ```
-Kamu bisa mengganti URL repositori di langkah 1 sesuai dengan repositori GitHub milikmu. Jika ada yang perlu ditambahkan atau diperbaiki, beri tahu saya ya!
+Jika ada yang perlu ditambahkan atau diperbaiki, beri tahu saya ya!
