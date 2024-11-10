@@ -1,9 +1,9 @@
 <!-- Navbar -->
 <nav class="navbar">
-    <div>
+    <a href="/">
         <x-logo />
         <h1>{{ config('app.name') }}</h1>
-    </div>
+    </a>
 
     <!-- Dark Mode Toggle Button -->
     <div x-data="{ mode: localStorage.getItem('theme') || 'system' }" class="flex items-center">

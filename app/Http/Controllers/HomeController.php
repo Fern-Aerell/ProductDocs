@@ -13,7 +13,13 @@ class HomeController extends Controller
         return view('home', compact(['products', 'content']));
     }
 
-    public function index2(string $product, string $feature) {
+    public function index2(string $product) {
+        $products = Product::with(['features'])->get();
+
+        return view('home', compact(['products']));
+    }
+
+    public function index3(string $product, string $feature) {
         $products = Product::with(['features'])->get();
 
         $content = Product::where('route', $product)

@@ -14,11 +14,11 @@ body {
     @apply flex flex-row items-center justify-between py-1 px-[10px] lg:px-[50px] xl:px-[200px] shadow-lg sticky top-0 left-0 bg-white dark:bg-gray-800 dark:text-gray-100 z-40;
 }
 
-.navbar > div {
-    @apply flex flex-row gap-2 items-center;
+.navbar > a {
+    @apply flex flex-row gap-2 items-center decoration-transparent;
 }
 
-.navbar > h1 {
+.navbar > a > h1 {
     @apply font-extrabold text-3xl dark:text-gray-100;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

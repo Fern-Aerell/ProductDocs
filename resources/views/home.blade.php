@@ -6,40 +6,39 @@
 @endsection
 
 @section('content')
-<div class="sidebar-and-mainbar-container">
+    <div class="sidebar-and-mainbar-container">
 
-    {{-- SIDEBAR --}}
-    <div x-data="{ open: window.innerWidth >= 1024 }" class="sidebar"
-        :style="{ width: open ? '330px' : '0' }"
-        x-init="window.addEventListener('resize', () => { open = window.innerWidth >= 1024 })">
-       <div class="sidebar-content" x-show="open">
-           @foreach ($products as $product)
-               <div x-data="{ open: JSON.parse(localStorage.getItem('sidebarOpen{{ $product->id }}')) || false }">
-                   <p @click="open = !open; localStorage.setItem('sidebarOpen{{ $product->id }}', open)">
-                       {{ $product->name }}
-                   </p>
-                   <ul x-show="open">
-                       @foreach ($product->features as $feature)
-                           <li class="{{ request()->routeIs('home.view') && request()->route('product') === $product->route && request()->route('feature') === $feature->route ? 'activate' : '' }}">
-                               <a href="{{ route('home.view', [$product->route, $feature->route]) }}">{{ $feature->name }}</a>
-                           </li>
-                       @endforeach
-                   </ul>                
-               </div>
-           @endforeach
-       </div>
-       <div @click="open = !open" class="sidebar-button" x-text="open ? '>' : '<'"></div>
-   </div>
-   
+        {{-- SIDEBAR --}}
+        <div x-data="{ open: window.innerWidth >= 1024 }" class="sidebar" :style="{ width: open ? '330px' : '0' }" x-init="window.addEventListener('resize', () => { open = window.innerWidth >= 1024 })">
+            <div class="sidebar-content" x-show="open">
+                @foreach ($products as $product)
+                    <div x-data="{ open: {{ (request()->routeIs('home.view.product') || request()->routeIs('home.view.product.feature')) && request()->route('product') === $product->route ? 'true' : 'false' }} }">
+                        <p @click="open = !open;">
+                            {{ $product->name }}
+                        </p>
+                        <ul x-show="open">
+                            @foreach ($product->features as $feature)
+                                <li
+                                    class="{{ request()->routeIs('home.view.product.feature') && request()->route('product') === $product->route && request()->route('feature') === $feature->route ? 'activate' : '' }}">
+                                    <a
+                                        href="{{ route('home.view.product.feature', [$product->route, $feature->route]) }}">{{ $feature->name }}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endforeach
+            </div>
+            <div @click="open = !open" class="sidebar-button" x-text="open ? '>' : '<'"></div>
+        </div>
 
-    {{-- MAINBAR --}}
-    <div class="mainbar">
-        @if ($content)
-            {!! $content !!}
-        @else
-            <no-content>There is no content for you to see.</no-content>
-        @endif
+        {{-- MAINBAR --}}
+        <div class="mainbar">
+            @if (isset($content) && $content)
+                {!! $content !!}
+            @else
+                <no-content>There is no content for you to see.</no-content>
+            @endif
+        </div>
+
     </div>
-
-</div>
 @endsection
