@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    @apply flex flex-row items-center justify-between py-1 px-[10px] lg:px-[50px] xl:px-[200px] shadow-lg sticky top-0 left-0 bg-white dark:bg-gray-800 dark:text-gray-100 z-40;
+    @apply flex flex-row flex-wrap items-center justify-between px-[10px] lg:px-[50px] xl:px-[200px] shadow-lg sticky top-0 left-0 bg-white dark:bg-gray-800 dark:text-gray-100 z-40;
 }
 
 .navbar > a {
@@ -19,7 +19,7 @@ body {
 }
 
 .navbar > a > h1 {
-    @apply font-extrabold text-3xl dark:text-gray-100;
+    @apply font-extrabold text-3xl dark:text-gray-100 text-black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -122,4 +122,94 @@ body {
 
 .dark .theme-toggle i {
     color: #e5e7eb; /* Icon color in dark mode */
+}
+
+.navbar-search-and-darkmodetoggle {
+    @apply flex flex-row gap-5 w-full sm:w-fit;
+}
+
+.navbar-search-and-darkmodetoggle button {
+    @apply bg-transparent border-none text-black dark:text-white p-0 flex justify-center;
+}
+
+/* Fake Search */
+.fake-search-container {
+    @apply flex flex-col w-full sm:w-[300px] hover:cursor-pointer;
+}
+
+.fake-search-container-icon {
+    @apply w-[15px];
+}
+
+.fake-search-container-body {
+    @apply flex flex-row items-center gap-3;
+}
+
+.fake-search-container hr {
+    @apply w-full h-[0.1px] bg-gray-200;
+}
+
+/* Search Background */
+.search-background {
+    background-color: rgba(0, 0, 0, 0.71); /* menggunakan rgba untuk transparansi */
+    @apply fixed top-0 left-0 w-screen h-screen z-50 flex justify-center;
+}
+
+.search-container {
+    @apply bg-white dark:bg-gray-800 p-3 w-full max-w-lg h-fit mt-[50px] rounded-md flex flex-col gap-1;
+}
+
+.search-form {
+    @apply flex flex-row items-center gap-3 p-3 outline-2 rounded-sm outline outline-red-500;
+}
+
+.search-form-icon {
+    @apply w-[30px] text-red-500;
+}
+
+.search-form input {
+    @apply text-xl border-none outline-none w-full text-black dark:text-white bg-transparent;
+}
+
+/* Search List */
+.search-list {
+    @apply flex flex-col overflow-y-auto overflow-x-hidden h-[300px];
+}
+
+/* Search List Child */
+.search-list-child {
+    @apply flex flex-col;
+}
+
+.search-list-child-product {
+    @apply text-black dark:text-white text-[15px] mb-1 sticky top-0 left-0 bg-white dark:bg-gray-800 py-2 m-0 p-0;
+}
+
+.search-list-child-feature {
+    @apply flex flex-row gap-3 px-3 bg-white dark:bg-gray-700 hover:bg-red-500 hover:dark:bg-red-500 shadow-lg rounded-md hover:cursor-pointer mb-1;
+}
+
+.search-list-child-feature svg {
+    @apply w-[20px];
+}
+
+.search-list-child-feature svg, 
+.search-list-child-feature p 
+{
+    @apply text-black dark:text-white;
+}
+
+.search-list-child-feature:hover svg, 
+.search-list-child-feature:hover p
+{
+    @apply text-white;
+}
+
+/* Utils */
+.hidden {
+    display: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
