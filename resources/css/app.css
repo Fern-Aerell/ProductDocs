@@ -186,7 +186,7 @@ body {
 }
 
 .search-list-child-feature {
-    @apply flex flex-row gap-3 px-3 bg-white dark:bg-gray-700 hover:bg-red-500 hover:dark:bg-red-500 shadow-lg rounded-md hover:cursor-pointer mb-1;
+    @apply flex flex-row gap-3 px-3 bg-white dark:bg-gray-700 hover:bg-red-500 hover:dark:bg-red-500 shadow-lg rounded-md hover:cursor-pointer mb-1 no-underline;
 }
 
 .search-list-child-feature svg {

@@ -17,7 +17,7 @@
         @yield('js')
     </head>
     <body>
-        <x-navbar/>
+        <x-navbar :products="$products" />
         @yield('content')
         <x-footer/>
         @yield('js2')
