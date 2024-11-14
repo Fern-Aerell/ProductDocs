@@ -9,6 +9,14 @@ ProductDocs adalah aplikasi dokumentasi berbasis Laravel 11 yang memungkinkan ad
 - Composer
 - Node.js dan NPM
 
+## Teknologi Yang Digunakan
+- PHP
+- Laravel 11
+- Filament (Untuk membuat halaman admin)
+- Filament Spatie Roles Permissions (Plugin fillament buatan Althinect untuk membuat role dan permission)
+- Filament Forms TinyEditor (Plugin fillament buatan Mohamed Sabil untuk membuat editor teks)
+- TailwindCSS (CSS Framework)
+
 ## Instalasi
 
 Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
@@ -16,7 +24,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 1. **Clone Repositori**
 
    ```bash
-   git clone https://github.com/Fern-Aerell/ProductDocs.git
+   git clone https://github.com/anonymous/ProductDocs.git
    cd ProductDocs
    ```
 
@@ -69,7 +77,16 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
    php artisan storage:link
    ```
 
-8. **Menjalankan Server**
+8. **Buat cache untuk icon**
+
+   Jalankan perintah berikut untuk membuat halaman admin fillament tidak berat.
+
+
+   ```bash
+   php artisan icons:cache
+   ```
+
+9. **Menjalankan Server**
 
    Untuk menjalankan server pengembangan:
 
@@ -79,7 +96,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
 
    Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-9. **Menjalankan NPM Dev**
+10. **Menjalankan NPM Dev**
 
     Untuk mengkompilasi aset frontend dan menjalankan server Vite:
 
