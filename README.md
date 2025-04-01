@@ -1,110 +1,109 @@
 # ProductDocs
 
-ProductDocs adalah aplikasi dokumentasi berbasis Laravel 11 yang memungkinkan admin untuk mengelola dokumentasi produk dengan mudah.
+ProductDocs is a Laravel 11-based documentation application that allows admins to easily manage product documentation.
 
-## Persyaratan
+## Requirements
 
-- PHP 8.2 atau lebih tinggi
+- PHP 8.2 or higher
 - MySQL
 - Composer
-- Node.js dan NPM
+- Node.js and NPM
 
-## Teknologi Yang Digunakan
+## Technologies Used
 - PHP
 - Laravel 11
-- Filament (Untuk membuat halaman admin)
-- Filament Spatie Roles Permissions (Plugin fillament buatan Althinect untuk membuat role dan permission)
-- Filament Forms TinyEditor (Plugin fillament buatan Mohamed Sabil untuk membuat editor teks)
+- Filament (For creating admin pages)
+- Filament Spatie Roles Permissions (Filament plugin by Althinect for creating roles and permissions)
+- Filament Forms TinyEditor (Filament plugin by Mohamed Sabil for creating a text editor)
 - TailwindCSS (CSS Framework)
 
-## Instalasi
+## Installation
 
-Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
+Follow these steps to install and run the project:
 
-1. **Clone Repositori**
+1. **Clone the Repository**
 
    ```bash
    git clone https://github.com/anonymous/ProductDocs.git
    cd ProductDocs
    ```
 
-2. **Instal Dependensi**
+2. **Install Dependencies**
 
-   Pastikan Composer dan NPM sudah terinstal, kemudian jalankan:
+   Make sure Composer and NPM are installed, then run:
 
    ```bash
    composer install
    npm install
    ```
 
-3. **Salin File `.env`**
+3. **Copy the `.env` File**
 
-   Salin file `.env.example` ke `.env` dan sesuaikan konfigurasi sesuai dengan kebutuhan Anda:
+   Copy the `.env.example` to `.env` and adjust the configuration as needed:
 
    ```bash
    cp .env.example .env
    ```
 
-4. **Generate Kunci Aplikasi**
+4. **Generate the Application Key**
 
-   Jalankan perintah berikut untuk menghasilkan kunci aplikasi:
+   Run the following command to generate the application key:
 
    ```bash
    php artisan key:generate
    ```
 
-5. **Migrasi Database**
+5. **Migrate the Database**
 
-   Jalankan migrasi untuk membuat tabel yang diperlukan:
+   Run the migration to create the required tables:
 
    ```bash
    php artisan migrate
    ```
 
-6. **Jalankan Seeder untuk Data User**
+6. **Run the Seeder for User Data**
 
-   Setelah migrasi, jalankan seeder untuk membuat data Superadmin dan Admin sementara:
+   After migration, run the seeder to create the Superadmin and Admin user data:
 
    ```bash
    php artisan db:seed
    ```
 
-7. **Buat Link Storage**
+7. **Create the Storage Link**
 
-   Jalankan perintah berikut untuk membuat link simbolik ke direktori storage:
+   Run the following command to create a symbolic link to the storage directory:
 
    ```bash
    php artisan storage:link
    ```
 
-8. **Buat cache untuk icon**
+8. **Create Icon Cache**
 
-   Jalankan perintah berikut untuk membuat halaman admin fillament tidak berat.
-
+   Run the following command to optimize the Filament admin page:
 
    ```bash
    php artisan icons:cache
    ```
 
-9. **Menjalankan Server**
+9. **Run the Server**
 
-   Untuk menjalankan server pengembangan:
+   To start the development server:
 
    ```bash
    php artisan serve
    ```
 
-   Akses aplikasi di [http://127.0.0.1:8000](http://127.0.0.1:8000).
+   Access the application at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-10. **Menjalankan NPM Dev**
+10. **Run NPM Dev**
 
-    Untuk mengkompilasi aset frontend dan menjalankan server Vite:
+    To compile frontend assets and run the Vite server:
 
     ```bash
     npm run dev
     ```
 
-## Data user sementara
+## Temporary User Data
 
    - **Superadmin**
      - Email: `superadmin@gmail.com`
@@ -114,10 +113,10 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan proyek:
      - Email: `admin@gmail.com`
      - Password: `123`
 
-## Informasi Tambahan
+## Additional Information
 
-Pastikan untuk memeriksa dokumentasi Laravel untuk informasi lebih lanjut mengenai fitur dan penggunaan.
+Make sure to check the Laravel documentation for more details on features and usage.
 
 ---
 
-Terima kasih telah menggunakan ProductDocs!
+Thank you for using ProductDocs!
